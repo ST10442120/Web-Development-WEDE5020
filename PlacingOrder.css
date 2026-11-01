@@ -1,0 +1,1010 @@
+css
+/* =====================================================
+   KABELO'S SHISANYAMA GRILL HOUSE
+   PLACE ORDER PAGE
+   ===================================================== */
+
+
+/* =====================================================
+   1. RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #db960c;
+    color: #222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =====================================================
+   2. CONTAINER
+===================================================== */
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   3. HEADER
+===================================================== */
+
+.site-header {
+    background: #171717;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.header-container {
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+}
+
+.logo-area img {
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    color: #f59e0b;
+
+    font-size: 20px;
+
+    line-height: 1.1;
+}
+
+.logo-text span {
+    color: #ddd;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ORDER FORM FEEDBACK */
+
+.order-feedback {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #d97706;
+    border-radius: 8px;
+    background: #fff8e8;
+    color: #333;
+}
+
+.order-feedback h3 {
+    color: #92400e;
+    margin-bottom: 12px;
+}
+
+.order-feedback p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.order-feedback pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.order-feedback[hidden] {
+    display: none;
+}
+
+/* FORM VALIDATION FOCUS */
+
+.order-form input:focus,
+.order-form textarea:focus {
+    outline: 2px solid #d97706;
+    outline-offset: 2px;
+}
+
+/* =====================================================
+   4. NAVIGATION
+===================================================== */
+
+.navbar ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    display: block;
+
+    padding: 10px 12px;
+
+    color: #eee;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    background: #f59e0b;
+
+    color: #171717;
+}
+
+.navbar a.active {
+    background: #f59e0b;
+
+    color: #171717;
+}
+
+
+/* =====================================================
+   5. HERO
+===================================================== */
+
+.order-hero {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("../images/seafood-platter.jpg")
+        center/cover no-repeat;
+}
+
+.order-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.25)
+        );
+}
+
+.order-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    padding: 70px 0;
+}
+
+.hero-label {
+    display: inline-block;
+
+    color: #f59e0b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.order-hero h2 {
+    max-width: 700px;
+
+    font-size:
+        clamp(42px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.order-hero p {
+    max-width: 650px;
+
+    color: #eee;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   6. ORDER SECTION
+===================================================== */
+
+.order-section {
+    padding: 90px 0;
+}
+
+.order-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(300px, 1fr);
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   7. ORDER CARD
+===================================================== */
+
+.order-card {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.08);
+}
+
+.card-heading {
+    margin-bottom: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.card-heading span {
+    color: #d97706;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.card-heading h2 {
+    margin: 10px 0;
+
+    color: #171717;
+
+    font-size: 32px;
+}
+
+.card-heading p {
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   8. FORM
+===================================================== */
+
+.order-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    color: #222;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.form-group label span {
+    color: #d97706;
+
+    margin-left: 3px;
+}
+
+
+/* INPUTS */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    background: #fafafa;
+
+    color: #222;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.form-group input {
+    height: 50px;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 110px;
+}
+
+
+/* INPUT FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f59e0b;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(245, 158, 11, 0.12);
+}
+
+
+/* PLACEHOLDER */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* SMALL HELP TEXT */
+
+.form-group small {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   9. SUBMIT BUTTON
+===================================================== */
+
+.submit-button {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f59e0b;
+
+    color: #171717;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #171717;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   10. INFORMATION SIDEBAR
+===================================================== */
+
+.order-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.info-card {
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    border: 1px solid #eee;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.05);
+}
+
+.info-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    background: #fff4dc;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+.info-card h3 {
+    color: #222;
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.info-link {
+    display: block;
+
+    color: #d97706;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-top: 8px;
+
+    transition: 0.3s ease;
+}
+
+.info-link:hover {
+    color: #171717;
+}
+
+
+/* =====================================================
+   11. MENU PROMO
+===================================================== */
+
+.menu-promo {
+    padding: 30px;
+
+    border-radius: 14px;
+
+    background: #171717;
+
+    color: white;
+}
+
+.menu-promo span {
+    color: #f59e0b;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.menu-promo h3 {
+    margin: 10px 0;
+
+    font-size: 24px;
+}
+
+.menu-promo p {
+    color: #bbb;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.menu-button {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    border: 1px solid #f59e0b;
+
+    border-radius: 6px;
+
+    color: #f59e0b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.menu-button:hover {
+    background: #f59e0b;
+
+    color: #171717;
+}
+
+
+/* =====================================================
+   12. BOTTOM CTA
+===================================================== */
+
+.order-cta {
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.84),
+            rgba(0, 0, 0, 0.84)
+        ),
+        url("../images/grilled chicken.jpg")
+        center/cover no-repeat;
+
+    color: white;
+}
+
+.cta-content {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.cta-content > span {
+    color: #f59e0b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.cta-content h2 {
+    margin: 15px 0;
+
+    font-size:
+        clamp(35px, 5vw, 52px);
+
+    line-height: 1.1;
+}
+
+.cta-content p {
+    color: #ddd;
+
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #f59e0b;
+
+    color: #171717;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   13. FOOTER
+===================================================== */
+
+.site-footer {
+    padding-top: 65px;
+
+    background: #111;
+
+    color: #ddd;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1.5fr;
+
+    gap: 60px;
+
+    padding-bottom: 50px;
+}
+
+.footer-grid h3 {
+    color: white;
+
+    margin-bottom: 18px;
+
+    font-size: 18px;
+}
+
+.footer-about p {
+    max-width: 450px;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   14. SOCIAL
+===================================================== */
+
+.social-links {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #444;
+
+    border-radius: 50%;
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #f59e0b;
+
+    color: #111;
+
+    border-color: #f59e0b;
+}
+
+
+/* =====================================================
+   15. FOOTER LINKS
+===================================================== */
+
+.footer-links li {
+    margin-bottom: 9px;
+}
+
+.footer-links a {
+    color: #aaa;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f59e0b;
+
+    padding-left: 5px;
+}
+
+
+/* =====================================================
+   16. FOOTER CONTACT
+===================================================== */
+
+.footer-contact p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   17. FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    padding: 20px;
+
+    border-top: 1px solid #292929;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+.footer-bottom em {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   18. TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .header-container {
+        flex-direction: column;
+
+        padding: 18px 0;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-info {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .menu-promo {
+        grid-column:
+            span 2;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   19. MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .header-container {
+        align-items: center;
+    }
+
+    .navbar ul {
+        justify-content: center;
+
+        gap: 3px;
+    }
+
+    .navbar a {
+        padding: 8px 9px;
+
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .order-hero {
+        min-height: 400px;
+    }
+
+    .order-hero-content {
+        text-align: center;
+    }
+
+    .order-hero h2 {
+        font-size: 42px;
+    }
+
+    .order-hero p {
+        font-size: 16px;
+    }
+
+
+    /* ORDER */
+
+    .order-section {
+        padding: 60px 0;
+    }
+
+    .order-card {
+        padding: 25px 20px;
+    }
+
+    .card-heading h2 {
+        font-size: 27px;
+    }
+
+
+    /* INFO */
+
+    .order-info {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .menu-promo {
+        grid-column: auto;
+    }
+
+
+    /* CTA */
+
+    .order-cta {
+        padding: 70px 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =====================================================
+   20. SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .navbar ul {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        width: 100%;
+    }
+
+    .navbar a {
+        text-align: center;
+    }
+
+    .order-hero h2 {
+        font-size: 35px;
+    }
+
+}
+

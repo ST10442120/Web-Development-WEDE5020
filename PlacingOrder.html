@@ -1,0 +1,666 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+          <meta name="description"
+      content="Place your order at Kabelo's Shisanyama Grill House. Choose your favourite South African braai meals and arrange collection.">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="favicon.ico">
+
+    <link rel="stylesheet"
+          href="/css/PlacingOrder.css">
+
+    <title>Place Your Order | Kabelo's Shisanyama Grill House</title>
+    <style>
+        body{
+            background-color: bisque;
+        
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- 
+     HEADER
+ -->
+
+<header class="site-header">
+
+    <div class="container header-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="logo-area">
+
+            <img src="images/kabeloLogo.png"
+                 alt="Kabelo's Shisanyama Grill House Logo">
+
+            <div class="logo-text">
+
+                <h1>Kabelo's</h1>
+
+                <span>
+                    Shisanyama Grill House
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="AboutUs.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="PlacingOrder.html"
+                       class="active">
+                        Place Order
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ContactUs.Html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ContactForm.html">
+                        Contact Form
+                    </a>
+                </li>
+
+                <li>
+                    <a href="WorkingHours.html">
+                        Working Hours
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Menu.Html">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Gallery.Html">
+                        Gallery
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- 
+     MAIN
+-->
+
+<main>
+
+
+    <!-- 
+         HERO
+     -->
+
+    <section class="order-hero">
+
+        <div class="order-hero-overlay"></div>
+
+        <div class="container order-hero-content">
+
+            <span class="hero-label">
+                 FRESH FROM THE FIRE
+            </span>
+
+            <h2>
+                Place Your Order
+            </h2>
+
+            <p>
+                Choose your favourite dishes and let us
+                prepare a delicious Kabelo's Shisanyama
+                experience for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 
+         ORDER SECTION
+    -->
+
+    <section class="order-section">
+
+        <div class="container order-layout">
+
+
+            <!-- 
+                 ORDER FORM
+             -->
+
+            <div class="order-card">
+
+                <div class="card-heading">
+
+                    <span>
+                        ONLINE ORDER
+                    </span>
+
+                    <h2>
+                        Tell Us What You'd Like
+                    </h2>
+
+                    <p>
+                        Complete the form below and we'll
+                        prepare your order fresh.
+                    </p>
+
+                </div>
+
+
+              <form id="orderForm"
+                  class="order-form"
+                     novalidate>
+
+
+                    <!-- Hidden fields -->
+
+                    
+
+                    <input type="hidden"
+                           name="source"
+                           value="web_order">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                            <span>*</span>
+                        </label>
+
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               placeholder="e.g. Thabo Mokoena"
+                               autocomplete="name"
+                               required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                            <span>*</span>
+                        </label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="you@example.com"
+                               autocomplete="email"
+                               required>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                            <span>*</span>
+                        </label>
+
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               placeholder="+27 82 123 4567"
+                               autocomplete="tel"
+                               required>
+
+                    </div>
+
+
+                    <!-- ORDER DETAILS -->
+
+                    <div class="form-group">
+
+                        <label for="orderDetails">
+                            Order Details
+                            <span>*</span>
+                        </label>
+
+                        <textarea id="orderDetails"
+                                  name="orderDetails"
+                                  placeholder="e.g. 2kg beef ribs, 1kg boerewors, extra chakalaka..."
+                                  rows="6"
+                                  required></textarea>
+
+                        <small>
+                            Please include the meal name,
+                            quantity, and any sides you would like.
+                        </small>
+
+                    </div>
+
+
+                    <!-- COLLECTION TIME -->
+
+                    <div class="form-group">
+
+                        <label for="collectionTime">
+                            Preferred Collection Time
+                        </label>
+
+                        <input type="datetime-local"
+                               id="collectionTime"
+                               name="collectionTime">
+
+                    </div>
+
+
+                    <!-- SPECIAL REQUESTS -->
+
+                    <div class="form-group">
+
+                        <label for="specialRequests">
+                            Special Requests
+                        </label>
+
+                        <textarea id="specialRequests"
+                                  name="specialRequests"
+                                  placeholder="e.g. mild spice, extra sauce, gluten-free pap..."
+                                  rows="4"></textarea>
+
+                        <small>
+                            Let us know about allergies,
+                            spice preferences, or other requests.
+                        </small>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit"
+                            class="submit-button">
+
+                         Submit Order
+
+                    </button>
+
+                </form>
+                <div id="orderFeedback"
+                    class="order-feedback"
+                       role="status"
+                         aria-live="polite"
+                           hidden>
+</div>
+
+            </div>
+
+
+
+            <!-- 
+                 ORDER INFORMATION
+             -->
+
+            <aside class="order-info">
+
+
+                <!-- INFO CARD -->
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        
+                    </div>
+
+                    <h3>
+                        Order &amp; Collection
+                    </h3>
+
+                    <p>
+                        All orders are prepared fresh.
+                        Please allow approximately
+                        <strong>30–45 minutes</strong>
+                        for collection.
+                    </p>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        
+                    </div>
+
+                    <h3>
+                        Collection Location
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Kabelo's Shisanyama Grill House
+                        </strong>
+                    </p>
+
+                    <p>
+                        Corner of Vilakazi &amp;
+                        Mkhize Street,
+                        Soweto
+                    </p>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        
+                    </div>
+
+                    <h3>
+                        Need Help?
+                    </h3>
+
+                    <p>
+                        If you have questions about your
+                        order, please contact us.
+                    </p>
+
+                    <a href="tel:+27123456789"
+                       class="info-link">
+
+                        +27 12 345 6789
+
+                    </a>
+
+                    <a href="mailto:info@kabelosshisanyamagrillhouse.com"
+                       class="info-link">
+
+                        info@kabelosshisanyamagrillhouse.com
+
+                    </a>
+
+                </div>
+
+
+                <!-- MENU -->
+
+                <div class="menu-promo">
+
+                    <span>
+                        NOT SURE WHAT TO ORDER?
+                    </span>
+
+                    <h3>
+                        Explore Our Menu
+                    </h3>
+
+                    <p>
+                        Take a look at our delicious
+                        selection before placing your order.
+                    </p>
+
+                    <a href="Menu.Html"
+                       class="menu-button">
+
+                        View Menu →
+
+                    </a>
+
+                </div>
+
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 
+         BOTTOM CTA
+     -->
+
+    <section class="order-cta">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <span>
+                     KABELO'S SHISANYAMA
+                </span>
+
+                <h2>
+                    Braai With Passion.
+                    Taste The Tradition.
+                </h2>
+
+                <p>
+                    Great food tastes better when shared
+                    with great people.
+                </p>
+
+                <a href="Menu.Html"
+                   class="btn">
+
+                    Explore Our Menu
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- 
+     FOOTER
+ -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-about">
+
+            <h3>
+                Kabelo's Shisanyama
+            </h3>
+
+            <p>
+                Fire-grilled since 2024. We bring people
+                together over real wood-fired braai,
+                good music, and even better vibes.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#"
+                   aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#"
+                   aria-label="Instagram">
+                    ◎
+                </a>
+
+                <a href="#"
+                   aria-label="WhatsApp">
+                    ◉
+                </a>
+
+                <a href="#"
+                   aria-label="Twitter">
+                    𝕏
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- LINKS -->
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="AboutUs.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Menu.Html">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="PlacingOrder.html">
+                        Order Online
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Gallery.Html">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ContactForm.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact Info
+            </h3>
+
+            <p>
+                 +27 12 345 6789
+            </p>
+
+            <p>
+                ✉ info@kabelosshisanyamagrillhouse.com
+            </p>
+
+            <p>
+                Corner of Vilakazi &amp;
+                Mkhize Street, Soweto
+            </p>
+
+            <p>
+                 Mon–Sat: 10:00–22:00
+                <br>
+                Sun: 11:00–20:00
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ST10442120 |
+            <em>
+                Order online · Braai with passion
+            </em>
+        </p>
+
+    </div>
+
+</footer>
+<script src="/js/PlacingOrder.js"></script>
+
+</body>
+</html>
+

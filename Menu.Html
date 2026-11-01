@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/Menu.css">
+
+    <title>Our Mouth-Watering Menu | Kabelo's Shisanyama Grill House</title>
+<style>
+        body{
+            background-color: bisque;
+        
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--  HEADER  -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo-area">
+                <img src="images/kabeloLogo.png"
+                     alt="Kabelo's Shisanyama Grill House Logo">
+
+                <div class="logo-text">
+                    <h1>Kabelo's</h1>
+                    <span>Shisanyama Grill House</span>
+                </div>
+            </a>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="PlacingOrder.html">Place Order</a></li>
+                    <li><a href="ContactUs.Html">Contact Us</a></li>
+                    <li><a href="ContactForm.html">Contact Form</a></li>
+                    <li><a href="WorkingHours.html">Working Hours</a></li>
+                    <li><a href="Menu.Html" class="active">Menu</a></li>
+                    <li><a href="Gallery.Html">Gallery</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!--  MAIN  -->
+    <main>
+
+        <!-- HERO  -->
+        <section class="menu-hero">
+
+            <div class="menu-hero-overlay"></div>
+
+            <div class="container menu-hero-content">
+
+                <span class="hero-label"> FRESH FROM THE FIRE</span>
+
+                <h2>Our Mouth-Watering Menu</h2>
+
+                <p>
+                    Delicious food, authentic South African flavours,
+                    and dishes grilled to perfection over an open flame.
+                </p>
+
+                <a href="PlacingOrder.html" class="hero-button">
+                    Order Your Favourite
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!--  MENU -->
+        <section class="menu-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>EXPLORE OUR MENU</span>
+
+                    <h2>Choose Your Favourite</h2>
+
+                    <p class="menu-intro">
+                        From juicy grilled meats and seafood to
+                        delicious vegetarian dishes, there is something
+                        for everyone at Kabelo's.
+                    </p>
+
+                </div>
+
+
+               
+<!-- MENU SEARCH AND FILTER -->
+
+<div class="menu-controls">
+
+    <div class="menu-search">
+
+        <label for="menuSearch">Search our menu</label>
+
+        <input
+            type="search"
+            id="menuSearch"
+            placeholder="Search meals..."
+            autocomplete="off"
+        >
+
+    </div>
+
+    <div class="menu-sort">
+
+        <label for="sortMenu">Sort by price</label>
+
+        <select id="sortMenu">
+
+            <option value="default">Default order</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+<!-- MENU CATEGORIES -->
+
+<div class="menu-categories" aria-label="Filter menu by category">
+
+    <button type="button" class="active" data-category="All">
+        All
+    </button>
+
+    <button type="button" data-category="Meats">
+        Meats
+    </button>
+
+    <button type="button" data-category="Seafood">
+        Seafood
+    </button>
+
+    <button type="button" data-category="Vegetarian">
+        Vegetarian
+    </button>
+
+    <button type="button" data-category="Burgers">
+        Burgers
+    </button>
+
+    <button type="button" data-category="Chicken">
+        Chicken
+    </button>
+
+</div>
+
+<!-- RESULTS COUNTER -->
+
+<p id="menuResults" aria-live="polite">
+    Showing all menu items
+</p>
+
+
+
+                <!-- MENU GRID -->
+                <div class="menu-grid" id="menuGrid">
+
+
+                    <!-- ITEM 1 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/grilled chicken.jpg"
+                                 alt="Juicy grilled chicken with vegetables">
+
+                            <span class="menu-category">Chicken</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Grilled Chicken</h3>
+                                <span class="menu-price">R129.99</span>
+                            </div>
+
+                            <p>
+                                Juicy grilled chicken served with seasonal
+                                vegetables and our delicious peri-peri sauce.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITEM 2 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/ribs.jpg"
+                                 alt="Tender grilled beef ribs">
+
+                            <span class="menu-category">Meats</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Beef Ribs</h3>
+                                <span class="menu-price">R189.99</span>
+                            </div>
+
+                            <p>
+                                Tender beef ribs slow-cooked to perfection
+                                and finished with our signature smoky glaze.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITEM 3 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/Vegetable Stir-Fry.jpg"
+                                 alt="Fresh vegetable stir-fry">
+
+                            <span class="menu-category">Vegetarian</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Vegetable Stir-Fry</h3>
+                                <span class="menu-price">R109.99</span>
+                            </div>
+
+                            <p>
+                                A colourful medley of fresh vegetables
+                                stir-fried with savoury Asian-inspired sauces.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITEM 4 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/seafood-platter.jpg"
+                                 alt="Fresh seafood platter with shrimp and fish">
+
+                            <span class="menu-category">Seafood</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Seafood Platter</h3>
+                                <span class="menu-price">R229.99</span>
+                            </div>
+
+                            <p>
+                                A delicious assortment of fresh seafood
+                                including shrimp, fish, and calamari.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITEM 5 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/Classic Burger.webp"
+                                 alt="Classic beef burger with cheese">
+
+                            <span class="menu-category">Burgers</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Classic Burger</h3>
+                                <span class="menu-price">R149.99</span>
+                            </div>
+
+                            <p>
+                                A juicy beef patty topped with cheddar cheese,
+                                lettuce, tomato, and our special house sauce.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITEM 6 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/lamb chops.png"
+                                 alt="Grilled lamb chops with rosemary">
+
+                            <span class="menu-category">Meats</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Lamb Chops</h3>
+                                <span class="menu-price">R199.99</span>
+                            </div>
+
+                            <p>
+                                Tender lamb chops grilled with rosemary and
+                                garlic, served with fresh mint sauce.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITEM 7 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/boerewors.webp"
+                                 alt="Traditional South African boerewors roll">
+
+                            <span class="menu-category">Meats</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Boerewors Roll</h3>
+                                <span class="menu-price">R89.99</span>
+                            </div>
+
+                            <p>
+                                Traditional South African boerewors served
+                                in a fresh roll with grilled onions and sauce.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITEM 8 -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img src="images/chakalaka and pap.jpg"
+                                 alt="Chakalaka served with pap">
+
+                            <span class="menu-category">Vegetarian</span>
+                        </div>
+
+                        <div class="menu-content">
+
+                            <div class="menu-title">
+                                <h3>Chakalaka &amp; Pap</h3>
+                                <span class="menu-price">R79.99</span>
+                            </div>
+
+                            <p>
+                                Spicy vegetable chakalaka served with creamy
+                                pap and a fresh side salad.
+                            </p>
+
+                            <a href="PlacingOrder.html" class="order-link">
+                                Order Now →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+            <p id="noResults" class="no-results" hidden>
+    Sorry, no meals match your search.
+    Please try another search or category.
+</p>
+
+        </section>
+
+
+        <!--  CTA -->
+        <section class="menu-cta">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <span> READY TO FEAST?</span>
+
+                    <h2>Taste the Tradition</h2>
+
+                    <p>
+                        Choose your favourite meal and enjoy the authentic
+                        Kabelo's Shisanyama experience.
+                    </p>
+
+                    <div class="cta-buttons">
+
+                        <a href="PlacingOrder.html"
+                           class="btn btn-primary">
+                            Place Your Order
+                        </a>
+
+                        <a href="WorkingHours.html"
+                           class="btn btn-secondary">
+                            Check Our Hours
+                        </a>
+
+                    </div>
+
+                    <p class="location">
+                         Corner of Vilakazi &amp; Mkhize Street, Soweto
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!--  FOOTER  -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <h3>Kabelo's Shisanyama</h3>
+
+                <p>
+                    Fire-grilled since 2015. We bring people together
+                    over real wood-fired braai, good music, and even
+                    better vibes.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="WhatsApp">◉</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Menu.Html">Menu</a></li>
+                    <li><a href="PlacingOrder.html">Order Online</a></li>
+                    <li><a href="Gallery.Html">Gallery</a></li>
+                    <li><a href="ContactForm.html">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact Info</h3>
+
+                <p> +27 11 555 1234</p>
+
+                <p>✉ info@kabelos.co.za</p>
+
+                <p>
+                     123 Braai Street, Soweto,<br>
+                    Johannesburg 1808
+                </p>
+
+                <p>
+                     Mon–Sat: 10:00–22:00<br>
+                    Sun: 11:00–20:00
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ST10442120 |
+                <em>Braai with passion · Taste the tradition</em>
+            </p>
+
+        </div>
+
+    </footer>
+<script src="/js/Menu.js"></script>
+</body>
+</html>
+```
